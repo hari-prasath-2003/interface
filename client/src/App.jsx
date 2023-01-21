@@ -2,6 +2,7 @@ function App() {
 
   return (
     <>
+      hi how are you
     </>
   )
 }
