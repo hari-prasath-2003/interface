@@ -1,0 +1,60 @@
+@media (max-width:576px) {
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .profile {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (min-width:992px) {
+    .icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .profile {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+hr {
+    color: gray;
+}
+
+.profile {
+    border-radius: 50%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all .3s;
+}
+
+.search:active {
+    background-color: rgba(55, 74, 247, 0.808);
+}
+
+
+.hide {
+    opacity: 0;
+    height: 0;
+    transition: opacity, height 0.3s ease-in;
+}
+
+.show {
+    opacity: 1;
+    height: 40px;
+    transition: opacity, height 0.3s ease-out;
+}

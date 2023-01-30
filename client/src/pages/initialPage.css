@@ -1,0 +1,37 @@
+.Typewriter {
+    display: inline;
+    font-weight: bolder;
+    color: rgba(88, 104, 254, 1);
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+.content-container {
+    padding-top: 30px;
+}
+
+@media (max-width:576px) {
+    .content-container {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:992px) {
+    .content-container {
+        padding-left: 150px;
+    }
+
+    .w-md-75 {
+        width: 75% !important;
+    }
+
+    .w-md-25 {
+        width: 25% !important
+    }
+}

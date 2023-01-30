@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const blog = require("./blog")
 const schema = mongoose.Schema
 
 const userSchema = new schema({
@@ -14,8 +15,8 @@ const userSchema = new schema({
     },
     password: String,
     blogs: [Object],
-    saved: [schema.Types.ObjectId],
-    interest: [String]
+    saved: [{ type: schema.Types.ObjectId, ref: blog }],
+    interest: String
 
 })
 
