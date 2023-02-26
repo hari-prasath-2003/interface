@@ -11,4 +11,4 @@ async function searchFetch(url) {
     return data
 }
 
-export default searchFetch;
+export default searchFetch
