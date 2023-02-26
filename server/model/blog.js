@@ -3,10 +3,11 @@ const mongoosh = require("mongoose")
 const blogSchema = new mongoosh.Schema({
     keyword: {
         type: String,
+        lowercase: true
     },
     title: {
         type: String,
-        maxLength: 50
+        maxLength: 100
     },
     author: {
         type: String,
@@ -17,6 +18,7 @@ const blogSchema = new mongoosh.Schema({
     },
     category: {
         type: String,
+        lowercase: true
     },
     thumbnail: String
 })

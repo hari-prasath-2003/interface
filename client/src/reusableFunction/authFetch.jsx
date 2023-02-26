@@ -1,7 +1,7 @@
 async function authFetch(body, url) {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort, 10000)
-    const result = await fetch("http://192.168.190.213:3000/" + url,
+    const result = await fetch("http://localhost:3000/" + url,
         { body: JSON.stringify(body), method: "POST", headers: { "Content-Type": "application/json" }, signal: controller.signal },)
         .then((res) => {
             if (res.status === 200) {
@@ -16,7 +16,7 @@ async function authFetch(body, url) {
             return err.message
         })
     clearTimeout(timeout)
-    document.cookie = "Authorisation = Bearer " + result.token
+    document.cookie = "Authorisation = Bearer " + result.token + ";max-age = " + new Date().getTime() + 96 * 36000
     return result
 }
 

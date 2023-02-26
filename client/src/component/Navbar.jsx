@@ -1,5 +1,6 @@
 import "./component.css"
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom"
 const Navbar = (props) => {
     const [showSearchBar, setShowSearchBar] = useState("hide")
     const searchBar = useRef()
@@ -32,7 +33,9 @@ const Navbar = (props) => {
                     <div className="d-flex align-items-end">
 
                         <img src="/assert/edit.png" alt="" className="icon" />
-                        <p className="fs-6 ps-2 " style={{ "color": "white" }}>Write</p>
+                        <Link to={"/create"}>
+                            <p className="fs-6 ps-2 " style={{ "color": "white" }}>Write</p>
+                        </Link>
                     </div>
                     <img src="/assert/user.png" className="icon" alt="" />
                 </div>

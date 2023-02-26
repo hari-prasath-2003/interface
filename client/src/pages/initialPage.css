@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 .Typewriter {
     display: inline;
     font-weight: bolder;
